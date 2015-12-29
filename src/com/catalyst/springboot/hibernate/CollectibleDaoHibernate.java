@@ -21,14 +21,15 @@ public class CollectibleDaoHibernate implements CollectibleDao {
 	
 	@Override
 	public void addCollectible(Collectible collectible){
+		/*adds collectible item line*/
+		em.persist(collectible);
 		
-		/* write method */
 	}
 
 	@Override
 	public void updateCollectible(Collectible collectible){
-		
-		/* write method */
+		/*Updates collectible fields*/
+		em.merge(collectible);
 	}
 
 	@Override
@@ -41,7 +42,6 @@ public class CollectibleDaoHibernate implements CollectibleDao {
 	@Override
 	public List<Collectible> getAllCollectibles() {
 		
-		/* write method */
-		return null;
+		return em.createQuery("SELECT e FROM collectible e", Collectible.class).getResultList();
 	};
 }
