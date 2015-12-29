@@ -10,16 +10,15 @@ $(document).ready(function() {
 						keyword1: $("#keyword1").val(),
 						keyword2: $("#keyword2").val(),
 						keyword3: $("#keyword3").val(),
-						description : $("#description").val()
+						description : $("#description").val(),
+						forSale: false
 					}
-					console.log(task);
+					console.log(collectible);
 					$.ajax({
 						method: 'POST',
 						url: '/collectibles',
 						contentType: 'application/json',
-						data: JSON.stringify(task)
-					}).then(function(task){
-						window.location.href = "/collectible/index";
-					});
+						data: JSON.stringify(collectible)
+					})
 				})
 			});
