@@ -12,7 +12,7 @@ $(document).ready(function() {
 						keyword2: $("#keyword2").val(),
 						keyword3: $("#keyword3").val(),
 						description : $("#description").val(),
-						forSale: false;
+						forSale: false
 					}
 					console.log(collectible);
 					$.ajax({
