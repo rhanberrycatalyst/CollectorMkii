@@ -1,19 +1,76 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title></title>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
   </head>
+    <title> Hobbyist Collection Page </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../public/collectible-index.css">
+    <script src="https:code.jquery.com/jquery-2.1.4.min.js"></script>
   <body>
-    <h1>Hello, world!</h1>
+    <h1> Please add your collectible below. </h1>
+    <div id = "add" class = "col-md-12">
+      <div class = "col-md-6" id= "check">
+        <div id = "top">
+        Name: &nbsp;<input type="name" name ="name" id="name">
+        </div>
+        <div id = "middle_top">
+          <label for="type">Type:</label>
+      		<select id="type">
+      			<option value="rocks">Rocks</option>
+      			<option value="arrowheads">Arrowheads</option>
+            <option value="coins">Coins</option>
+      			<option value="cards">Cards</option>
+            <option value="stamps">Stamps</option>
+      			<option value="ornaments">Ornaments</option>
+            <option value="books">Books</option>
+      			<option value="pez">Pez Dispenser</option>
+      		</select>
+          <div class= "pull-right">
+            <label for="color">Color:</label>
+            <select id="color">
+              <option value="black">Black</option>
+              <option value="blue">Blue</option>
+              <option value="green">Green</option>
+              <option value="orange">Orange</option>
+              <option value="red">Red</option>
+              <option value="yellow">Yellow</option>
+              <option value="violet">Violet</option>
+              <option value="white">White</option>
+            </select>
+          </div>
+        </div>
+        <br>
+        <div id = "middle">
+          <span id = "agespan">Age:&nbsp; &nbsp;<input type="age" name ="age" id="age"></span>
+          Catalog Number: &nbsp;<input type="catalogId" name ="catalogId" id="catalogId">
+
+        </div>
+        <br>
+        Keywords:<br>
+        <input type="keyword1" name ="keyword1" id="keyword1">
+        <input type="keyword2" name ="keyword2" id="keyword2">
+        <input type="keyword3" name ="keyword3" id="keyword3">
+      </div>
+    	<div class = "col-md-6">
+        <label for="description">Description:</label>
+        <textarea class="form-control" rows="5" id="description"></textarea>
+      </div>
+    </div>
+    <div class="container">
+      <button type="button" class="btn btn-info btn-block">Submit Your Collectible</button>
+    </div>
+    <table class = "table table-bordered" align="center" id = "table">
+        <tr>
+          <th>Catalog ID</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Type</th>
+          <th>Age</th>
+          <th>Color</th>
+          <th>Keywords</th>
+        <tr>
+      <table>
 
 
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
   </body>
 </html>
