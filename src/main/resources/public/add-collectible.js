@@ -18,7 +18,7 @@ $(document).ready(function() {
 						method: 'POST',
 						url: '/collectibles',
 						contentType: 'application/json',
-						data: JSON.stringify(task)
+						data: JSON.stringify(collectible)
 					})
 				})
 			});

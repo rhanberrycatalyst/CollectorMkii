@@ -29,6 +29,7 @@ public class CollectibleWebService {
 	 */
 	@RequestMapping(value = "/collectibles", method = RequestMethod.POST)
 	public void addTask(@RequestBody Collectible collectible) {
+		System.out.println("WebServPOST");
 		collectibleService.addCollectible(collectible);
 	}
 
