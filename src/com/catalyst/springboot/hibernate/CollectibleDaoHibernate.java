@@ -35,13 +35,12 @@ public class CollectibleDaoHibernate implements CollectibleDao {
 	@Override
 	public Collectible getCollectibleById(Integer id){
 		
-		/* write method */
-		return null;
+		return em.createQuery("SELECT e FROM Collectible e WHERE e.id = :id", Collectible.class).setParameter("id", id).getSingleResult();
 	}
 
 	@Override
 	public List<Collectible> getAllCollectibles() {
 		
-		return em.createQuery("SELECT e FROM collectible e", Collectible.class).getResultList();
+		return em.createQuery("SELECT e FROM Collectible e", Collectible.class).getResultList();
 	};
 }
