@@ -1,8 +1,16 @@
 package com.catalyst.springboot.entities;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  * Collectible
  */
+@Entity
+@Table(name="itemschema.collectible")
 public class Collectible {
 
 	/* KEYWORDS THAT ARE ATTACHED TO EACH COLLECTIBLE ITEM */
@@ -19,7 +27,9 @@ public class Collectible {
 	}
 
 	/* FIELDS */
-	private Integer id;
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private Integer collectId;
 	private int catalogueNumber;
 	private int age;
 	private String name;
@@ -34,7 +44,7 @@ public class Collectible {
 
 	/* DEFAULT CONSTRUCTOR */
 	public Collectible() {
-		this.id = 0;
+		this.collectId = 0;
 		this.catalogueNumber = 0;
 		this.age = 0;
 		this.name = "";
@@ -66,7 +76,7 @@ public class Collectible {
 	/* SETTERS */
 
 	public void setId(Integer id) {
-		this.id = id;
+		this.collectId = id;
 	}
 
 	public void setAge(int age) {
@@ -144,7 +154,7 @@ public class Collectible {
 	}
 
 	public Integer getId() {
-		return id;
+		return collectId;
 	}
 
 }
