@@ -1,5 +1,6 @@
 $(document).ready(function() {
-				$("#submit").click(function(){
+	console.log("JQUERYCHECK");			
+	$("#submit").click(function(){
 					var collectible = {
 						name : $("#title").val(),
 						type : $("#type").val(),
