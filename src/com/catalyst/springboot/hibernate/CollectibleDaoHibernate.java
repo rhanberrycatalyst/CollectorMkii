@@ -11,37 +11,37 @@ import com.catalyst.springboot.entities.Collectible;
 @Component
 @Transactional
 public class CollectibleDaoHibernate implements CollectibleDao {
-	
+
 	@PersistenceContext
 	private EntityManager em;
-	
-	public void setEm(EntityManager em){
+
+	public void setEm(EntityManager em) {
 		this.em = em;
 	}
-	
+
 	@Override
-	public void addCollectible(Collectible collectible){
-		
-		/* write method */
+	public void addCollectible(Collectible collectible) {
+		/* adds collectible item line */
+		em.persist(collectible);
+
 	}
 
 	@Override
-	public void updateCollectible(Collectible collectible){
-		
-		/* write method */
+	public void updateCollectible(Collectible collectible) {
+		/* Updates collectible fields */
+		em.merge(collectible);
 	}
 
 	@Override
-	public Collectible getCollectibleById(Integer id){
-		
-		/* write method */
-		return null;
+	public Collectible getCollectibleById(Integer id) {
+
+		return em.createQuery("SELECT e FROM Collectible e WHERE e.id = :id", Collectible.class).setParameter("id", id)
+				.getSingleResult();
 	}
 
 	@Override
 	public List<Collectible> getAllCollectibles() {
-		
-		/* write method */
-		return null;
+
+		return em.createQuery("SELECT e FROM Collectible e", Collectible.class).getResultList();
 	};
 }
