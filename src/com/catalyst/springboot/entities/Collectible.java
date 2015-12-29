@@ -13,6 +13,8 @@ public class Collectible {
 		 * collectible HERE Example: SPORTS, MOVIES, ANTIQUES Keywords are
 		 * definite (will not be updated once assigned)
 		 */
+		
+		SPORTS, SCIENCE, MOVIES, ANTIQUES
 
 	}
 
@@ -42,6 +44,23 @@ public class Collectible {
 		this.color = "";
 		this.forSale = false;
 		this.CollectibleKeywords = null;
+	}
+	
+	/* CONSTRUCTOR */
+
+	public Collectible(Integer idIN, int catalogueNumberIN, int ageIN, String nameIN,
+			String descriptionIN, String categoryIN, String conditionIN, String colorIN,
+			boolean forSaleIN){
+		
+		setId(idIN);
+		setCatalogueNumber(catalogueNumberIN);
+		setAge(ageIN);
+		setName(nameIN);
+		setDescription(descriptionIN);
+		setCategory(categoryIN);
+		setColor(colorIN);
+		setCondition(conditionIN);
+		setForSale(forSaleIN);
 	}
 
 	/* SETTERS */
