@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	console.log("JQUERYCHECK");			
+	console.log("JQUERYCHECK");
 	$("#submit").click(function(){
 					var collectible = {
 						name : $("#title").val(),
@@ -11,7 +11,8 @@ $(document).ready(function() {
 						keyword1: $("#keyword1").val(),
 						keyword2: $("#keyword2").val(),
 						keyword3: $("#keyword3").val(),
-						description : $("#description").val()
+						description : $("#description").val(),
+						forSale: false;
 					}
 					console.log(collectible);
 					$.ajax({
