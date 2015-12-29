@@ -1,6 +1,33 @@
-#add {
+#add, #update_add {
   font-weight: bold;
-  margin-bottom: 10px;
+}
+
+#add {
+    margin-bottom: 10px;
+}
+
+#update_add {
+  margin: 0 10px 0 10px;
+}
+
+#update_top{
+  margin: 25px 0 25px 0;
+}
+
+#update_agespan {
+  margin-right: 30px;
+}
+
+#update_type {
+  margin-right: 60px;
+}
+
+#update_condition{
+  margin-right: 60px;
+}
+
+#update_name{
+  padding-right: 39.5%;
 }
 
 #top {
