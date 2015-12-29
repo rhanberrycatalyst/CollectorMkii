@@ -28,6 +28,7 @@
             <option value="Books">Books</option>
       			<option value="Pez Dispenser">Pez Dispenser</option>
       		</select>
+          <label for="condition">Condition:</label>
           <select id="condition">
       			<option value="New">New</option>
       			<option value="Like New">Like New</option>
@@ -84,19 +85,71 @@
         <button type="button" class="btn btn-info btn-block" data-toggle="modal" data-target="#myModal">Update Item</button>
 
           <div class="modal fade" id="myModal" role="dialog">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-lg">
 
               <!-- Modal content-->
               <div class="modal-content">
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  <h4 class="modal-title">Modal Header</h4>
+                  <h4 class="modal-title">Update Collectible</h4>
                 </div>
-                <div class="modal-body">
-                  <p>Some text in the modal.</p>
+                <div id = "update_add">
+                  <div id= "update_check">
+                    <div id = "update_top">
+                    Name: &nbsp;<input type="name" name ="name" id="update_name">
+                    </div>
+                    <div id = "update_middle_top">
+                      <label for="type">Type:&nbsp;</label>
+                  		<select id="update_type">
+                  			<option value="Rocks">Rocks</option>
+                  			<option value="Arrowheads">Arrowheads</option>
+                        <option value="Coins">Coins</option>
+                  			<option value="Cards">Cards</option>
+                        <option value="Stamps">Stamps</option>
+                  			<option value="Ornaments">Ornaments</option>
+                        <option value="Books">Books</option>
+                  			<option value="Pez Dispenser">Pez Dispenser</option>
+                  		</select>
+                      <label for="condition">Condition:</label>
+                      <select id="update_condition">
+                  			<option value="New">New</option>
+                  			<option value="Like New">Like New</option>
+                        <option value="Good">Good</option>
+                  			<option value="Fair">Fair</option>
+                        <option value="Poor">Poor</option>
+                  		</select>
+                      <label for="color">Color:</label>
+                      <select id="update_color">
+                        <option value="Black">Black</option>
+                        <option value="Blue">Blue</option>
+                        <option value="Green">Green</option>
+                        <option value="Orange">Orange</option>
+                        <option value="Red">Red</option>
+                        <option value="Yellow">Yellow</option>
+                        <option value="Violet">Violet</option>
+                        <option value="White">White</option>
+                      </select>
+                    </div>
+                    <br>
+                    <div id = "update_middle">
+                      <span id = "update_agespan">Age:&nbsp; &nbsp;<input type="age" name ="age" id="update_age"></span>
+                      Catalog Number: &nbsp;<input type="catalogId" name ="catalogId" id="update_catalogId">
+                    </div>
+                    <br>
+                    Keywords:<br>
+                    <input type="keyword1" name ="keyword1" id="update_keyword1">
+                    <input type="keyword2" name ="keyword2" id="update_keyword2">
+                    <input type="keyword3" name ="keyword3" id="update_keyword3">
+                  </div>
+                	<div>
+                    <label for="description">Description:</label>
+                    <textarea class="form-control" rows="5" id="update_description"></textarea>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-info btn-lg" id="updateSubmit">Update Your Collectible</button>
+                  </div>
                 </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
                 </div>
               </div>
 
