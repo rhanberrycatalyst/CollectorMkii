@@ -55,4 +55,27 @@ public class CollectibleServiceTest{
 		assertEquals(target.getCollectibleById(55555), testCollectible);
 	
 	}
+	
+	public void updateCollectibleByIdTest(){
+		
+		/* make new object */
+		Collectible testCollectible = new Collectible(55555, 1, 1, "String nameIN",
+				"String descriptionIN", "String categoryIN", "String conditionIN", "String colorIN",
+				false);
+		
+		/* make new object with same id but different other attributes  */
+		Collectible testCollectibleUpdated = new Collectible(55555, 2, 2, "UPDATED",
+				"UPDATED", "UPDATED", "UPDATED", "UPDATED",
+				true);
+		
+		/* add object to the list */
+		target.addCollectible(testCollectible);
+		
+		/* send in new object with same ID which should update other attributes */
+		target.updateCollectible(testCollectibleUpdated);
+		
+		/* check to see if the name of the object with id 55555 is now updated */
+		assertEquals(target.getCollectibleById(55555).getName(), "UPDATED");
+
+	}
 }

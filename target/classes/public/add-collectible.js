@@ -12,7 +12,11 @@ $(document).ready(function() {
 						keyword2: $("#keyword2").val(),
 						keyword3: $("#keyword3").val(),
 						description : $("#description").val(),
+<<<<<<< HEAD
 						forSale: false
+=======
+						forSale: false;
+>>>>>>> branch 'master' of https://github.com/rhanberrycatalyst/CollectorMkii.git
 					}
 					console.log(collectible);
 					$.ajax({
