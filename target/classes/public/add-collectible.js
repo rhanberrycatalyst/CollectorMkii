@@ -12,14 +12,12 @@ $(document).ready(function() {
 						keyword3: $("#keyword3").val(),
 						description : $("#description").val()
 					}
-					console.log(task);
+					console.log(collectible);
 					$.ajax({
 						method: 'POST',
 						url: '/collectibles',
 						contentType: 'application/json',
 						data: JSON.stringify(task)
-					}).then(function(task){
-						window.location.href = "/collectible/index";
-					});
+					})
 				})
 			});
