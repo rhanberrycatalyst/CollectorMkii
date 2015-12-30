@@ -5,11 +5,15 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
+
 import java.util.ArrayList;
 import java.util.List;
+
 import org.junit.Before;
 import org.junit.Test;
+
 import com.catalyst.springboot.daos.CollectibleDao;
+import com.catalyst.springboot.daos.CollectibleDaoImpl;
 import com.catalyst.springboot.entities.Collectible;
 import com.catalyst.springboot.services.CollectibleServiceImpl;
 
@@ -41,7 +45,10 @@ public class CollectibleServiceTest{
 		verify(mockCollectibleDao, times(1)).addCollectible(null);
 	}
 	
+	@Test
 	public void getCollectibleByIdTest(){
+		
+		CollectibleDaoImpl testObject = new CollectibleDaoImpl();
 
 		/* make new object */
 		Collectible testCollectible = new Collectible(55555, 1, 1, "String nameIN",
@@ -49,14 +56,17 @@ public class CollectibleServiceTest{
 				false);
 		
 		/* add the test object to the list */
-		target.addCollectible(testCollectible);
+		testObject.addCollectible(testCollectible);
 		
 		/* check to see if getCollectibleByID returns the testCollectibleObject as expected */
-		assertEquals(target.getCollectibleById(55555), testCollectible);
+		assertEquals(testObject.getCollectibleById(55555), testCollectible);
 	
 	}
 	
+	@Test
 	public void updateCollectibleByIdTest(){
+		
+		CollectibleDaoImpl testObject = new CollectibleDaoImpl();
 		
 		/* make new object */
 		Collectible testCollectible = new Collectible(55555, 1, 1, "String nameIN",
@@ -69,13 +79,13 @@ public class CollectibleServiceTest{
 				true);
 		
 		/* add object to the list */
-		target.addCollectible(testCollectible);
+		testObject.addCollectible(testCollectible);
 		
 		/* send in new object with same ID which should update other attributes */
-		target.updateCollectible(testCollectibleUpdated);
+		testObject.updateCollectible(testCollectibleUpdated);
 		
 		/* check to see if the name of the object with id 55555 is now updated */
-		assertEquals(target.getCollectibleById(55555).getName(), "UPDATED");
+		assertEquals(testObject.getCollectibleById(55555).getName(), "UPDATED");
 
 	}
 }
