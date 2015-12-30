@@ -13,19 +13,7 @@ import javax.persistence.Table;
 @Table(name="itemschema.collectible")
 public class Collectible {
 
-	/* KEYWORDS THAT ARE ATTACHED TO EACH COLLECTIBLE ITEM */
-	public enum CollectibleKeyWords {
-
-		/*
-		 * all possible keywords that can be used to search for a particular
-		 * collectible HERE Example: SPORTS, MOVIES, ANTIQUES Keywords are
-		 * definite (will not be updated once assigned)
-		 */
-		
-		SPORTS, SCIENCE, MOVIES, ANTIQUES
-
-	}
-
+	
 	/* FIELDS */
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
