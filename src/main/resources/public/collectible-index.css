@@ -1,41 +1,25 @@
+/**************************************
+ GENERAL
+***************************************/
+
 #add, #update_add {
   font-weight: bold;
+}
+
+/**************************************
+ADD COLLECTIBLE HTML
+***************************************/
+h1 {
+  text-align:center;
+  margin-bottom: 25px;
 }
 
 #add {
     margin-bottom: 10px;
 }
 
-#update_add {
-  margin: 0 10px 0 10px;
-}
-
-#update_top{
-  margin: 25px 0 25px 0;
-}
-
-#update_agespan {
-  margin-right: 30px;
-}
-
-#update_type {
-  margin-right: 60px;
-}
-
-#update_condition{
-  margin-right: 60px;
-}
-
-#update_name{
-  padding-right: 39.5%;
-}
-
 #top {
   overflow: auto;
-}
-#table{
-  max-width: 95%;
-  margin: 10px 2.5% 0 2.5%;
 }
 
 #type {
@@ -45,11 +29,6 @@
 #color {
   margin-right: 45px;
   padding-right: 45px;
-}
-
-h1 {
-  text-align:center;
-  margin-bottom: 25px;
 }
 
 #keyword1, #keyword2, #keyword3 {
@@ -78,4 +57,41 @@ h1 {
 #middle_top {
   margin-bottom: -5px;
   padding:0px;
+}
+
+/**************************************
+COLLECTIBLE INDEX
+***************************************/
+
+#table{
+  max-width: 95%;
+  margin: 10px 2.5% 0 2.5%;
+}
+
+/**************************************
+ UPDATE COLLECTIBLE MODAL
+***************************************/
+
+#update_add {
+  margin: 0 10px 0 10px;
+}
+
+#update_top{
+  margin: 25px 0 25px 0;
+}
+
+#update_agespan {
+  margin-right: 30px;
+}
+
+#update_type {
+  margin-right: 60px;
+}
+
+#update_condition{
+  margin-right: 60px;
+}
+
+#update_name{
+  padding-right: 39.5%;
 }
