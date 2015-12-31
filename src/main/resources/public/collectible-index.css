@@ -2,61 +2,96 @@
  GENERAL
 ***************************************/
 
+body{
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eff4fb+0,e9eef7+40,dde6f5+100 */
+background: rgb(239,244,251); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(239,244,251,1) 0%, rgba(233,238,247,1) 40%, rgba(221,230,245,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(239,244,251,1) 0%,rgba(233,238,247,1) 40%,rgba(221,230,245,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(239,244,251,1) 0%,rgba(233,238,247,1) 40%,rgba(221,230,245,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eff4fb', endColorstr='#dde6f5',GradientType=0 ); /* IE6-9 */
+}
+
+h1 {
+  text-align:center;
+  margin-bottom: 25px;
+  font-size: 40px;
+}
+
+/**************************************
+ADD & UPDATE COLLECTIBLE HTML
+***************************************/
+
 #add, #update_add {
   font-weight: bold;
+}
+
+.somepadding {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.nopadding{
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.keyword-control{
+  margin-top: 3px;
+}
+
+#age, #update_age {
+  padding-right: 5px;
+}
+
+#catalogdId, #update_catalogId {
+  padding-left: 5px;
+}
+
+#color-option1{
+  background-color: black;
+  color: white;
+}
+#color-option2{
+  background-color: blue;
+  color: white;
+}
+#color-option3{
+  background-color: green;
+  color: white;
+}
+#color-option4{
+  background-color: orange;
+  color: white;
+}
+#color-option5{
+  background-color: red;
+  color: white;
+}
+#color-option6{
+  background-color: violet;
+  color: black;
+}
+#color-option7{
+  background-color: yellow;
+  color: black;
+}
+#color-option8{
+  background-color: white;
+  color: black;
 }
 
 /**************************************
 ADD COLLECTIBLE HTML
 ***************************************/
-h1 {
-  text-align:center;
-  margin-bottom: 25px;
-}
-
-#add {
-    margin-bottom: 10px;
-}
-
 #top {
   overflow: auto;
 }
 
-#type {
-  margin-right: 45px;
-}
-
-#color {
-  margin-right: 45px;
-  padding-right: 45px;
-}
-
-#keyword1, #keyword2, #keyword3 {
-  margin: auto;
-}
-
-#agespan {
-  padding-right: 15px;
-  margin-right: 17px;
-}
-
-#middle {
-  margin-bottom: -5px;
-
-}
-
 #submit {
+  max-width: 97.8%;
+  margin-left: 15px;
   margin-top: 10px;
-}
-
-#name {
-  padding-right: 55%;
-  margin-bottom: 15px;
-}
-
-#middle_top {
-  margin-bottom: -5px;
-  padding:0px;
+  margin-bottom: 10px;
 }
 
 /**************************************
@@ -72,26 +107,13 @@ COLLECTIBLE INDEX
  UPDATE COLLECTIBLE MODAL
 ***************************************/
 
-#update_add {
-  margin: 0 10px 0 10px;
+#updateItem{
+  max-width: 97.8%;
+  margin-left: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-#update_top{
-  margin: 25px 0 25px 0;
-}
-
-#update_agespan {
-  margin-right: 30px;
-}
-
-#update_type {
-  margin-right: 60px;
-}
-
-#update_condition{
-  margin-right: 60px;
-}
-
-#update_name{
-  padding-right: 39.5%;
+#modalButton {
+  margin-top: 10px;
 }
