@@ -7,70 +7,78 @@
     <link rel="stylesheet" type="text/css" href="collectible-index.css">
     <script src="https:code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
     <script src="add-collectible.js"></script>
   <body>
-    <h1> Please add your collectible below. </h1>
+    <div class="page-header">
+      <h1> Personal Collectible Database </h1>
+    </div>
     <div id = "add" class = "col-md-12">
       <div class = "col-md-6" id= "check">
         <div id = "top">
-        Name: &nbsp;<input type="name" name ="name" id="name">
+        Name:<input class = "form-control" type="name" name ="name" id="name">
         </div>
-        <div id = "middle_top">
-          <label for="type">Type:</label>
-      		<select id="type">
-      			<option value="Rocks">Rocks</option>
-      			<option value="Arrowheads">Arrowheads</option>
-            <option value="Coins">Coins</option>
-      			<option value="Cards">Cards</option>
-            <option value="Stamps">Stamps</option>
-      			<option value="Ornaments">Ornaments</option>
-            <option value="Books">Books</option>
-      			<option value="Pez Dispenser">Pez Dispenser</option>
-      		</select>
-          <label for="condition">Condition:</label>
-          <select id="condition">
-      			<option value="New">New</option>
-      			<option value="Like New">Like New</option>
-            <option value="Good">Good</option>
-      			<option value="Fair">Fair</option>
-            <option value="Poor">Poor</option>
-      		</select>
-          <div class= "pull-right">
-            <label for="color">Color:</label>
-            <select id="color">
-              <option value="Black">Black</option>
-              <option value="Blue">Blue</option>
-              <option value="Green">Green</option>
-              <option value="Orange">Orange</option>
-              <option value="Red">Red</option>
-              <option value="Yellow">Yellow</option>
-              <option value="Violet">Violet</option>
-              <option value="White">White</option>
-            </select>
+        <div id = "middle_top" class="container-fluid nopadding">
+          <div class = "row nopadding">
+            <div class = "col-sm-4 nopadding">
+              <label for="type">Type:</label>
+          		<select id="type" class = "form-control">
+          			<option value="Rocks">Rocks</option>
+          			<option value="Arrowheads">Arrowheads</option>
+                <option value="Coins">Coins</option>
+          			<option value="Cards">Cards</option>
+                <option value="Stamps">Stamps</option>
+          			<option value="Ornaments">Ornaments</option>
+                <option value="Books">Books</option>
+          			<option value="Pez Dispenser">Pez Dispenser</option>
+          		</select>
+            </div>
+            <div class = "col-sm-4">
+              <label for="condition">Condition:</label>
+              <select id="condition" class = "form-control">
+          			<option value="New">New</option>
+          			<option value="Like New">Like New</option>
+                <option value="Good">Good</option>
+          			<option value="Fair">Fair</option>
+                <option value="Poor">Poor</option>
+          		</select>
+            </div>
+            <div class = "col-sm-4 nopadding">
+              <label for="color">Color:</label>
+              <select id="color" class = "form-control background-color">
+                <option id = "color-option1" value="Black">Black</option>
+                <option id = "color-option2" value="Blue">Blue</option>
+                <option id = "color-option3" value="Green">Green</option>
+                <option id = "color-option4" value="Orange">Orange</option>
+                <option id = "color-option5" value="Red">Red</option>
+                <option id = "color-option6" value="Violet">Violet</option>
+                <option id = "color-option7" value="Yellow">Yellow</option>
+                <option id = "color-option8" value="White">White</option>
+              </select>
+            </div>
           </div>
         </div>
-        <br>
-        <div id = "middle">
-          <span id = "agespan">Age:&nbsp; &nbsp;<input type="age" name ="age" id="age"></span>
-          Catalog Number: &nbsp;<input type="catalogId" name ="catalogId" id="catalogId">
+        <div class = "row nopadding">
+          <div id="age" class = "col-xs-4 somepadding">
+            Age:<input type="age" class = "form-control" name ="age">
+          </div>
+          <div id="catalogId" class = "col-xs-7 somepadding pull-right">
+            Catalog Number:<input type="catalogId" class = "form-control" name ="catalogId">
+          </div>
         </div>
-        <br>
-        Keywords:<br>
-        <input type="keyword1" name ="keyword1" id="keyword1">
-        <input type="keyword2" name ="keyword2" id="keyword2">
-        <input type="keyword3" name ="keyword3" id="keyword3">
+        Keywords:
+        <input type="keyword1" class = "form-control keyword-control" name ="keyword1" id="keyword1">
+        <input type="keyword2" class = "form-control keyword-control" name ="keyword2" id="keyword2">
+        <input type="keyword3" class = "form-control keyword-control" name ="keyword3" id="keyword3">
       </div>
     	<div class = "col-md-6">
         <label for="description">Description:</label>
-        <textarea class="form-control" rows="5" id="description"></textarea>
+        <textarea class="form-control" rows="13" id="description"></textarea>
       </div>
     </div>
-    <div class="container">
+    <div class="container col-md-12">
       <button type="button" class="btn btn-info btn-block" id="submit">Submit Your Collectible</button>
-
     </div>
-    <table class = "table table-bordered" align="center" id = "table">
+    <table class = "table table-bordered table-hover table-condensed" align="center" id = "table">
         <tr>
           <th>Catalog ID</th>
           <th>Name</th>
@@ -79,84 +87,117 @@
           <th>Age</th>
           <th>Color</th>
           <th>Keywords</th>
+        </tr>
         <tr>
+          <td>Catalog ID</td>
+          <td>Name</td>
+          <td>Description</td>
+          <td>Type</td>
+          <td>Age</td>
+          <td>Color</td>
+          <td>Keywords</td>
+        </tr>
+        <tr>
+          <td>Catalog ID</td>
+          <td>Name</td>
+          <td>Description</td>
+          <td>Type</td>
+          <td>Age</td>
+          <td>Color</td>
+          <td>Keywords</td>
+        </tr>
+        <tr>
+          <td>Catalog ID</td>
+          <td>Name</td>
+          <td>Description</td>
+          <td>Type</td>
+          <td>Age</td>
+          <td>Color</td>
+          <td>Keywords</td>
+        </tr>
       <table>
+        <div class = "container col-md-12">
+          <button type="button" class="btn btn-info btn-block" data-toggle="modal" id = "updateItem" data-target="#myModal">Update Item</button>
+        </div>
+        <br><br><br><br>
       <div class="container">
-        <button type="button" class="btn btn-info btn-block" data-toggle="modal" data-target="#myModal">Update Item</button>
-
-          <div class="modal fade" id="myModal" role="dialog">
-            <div class="modal-dialog modal-lg">
-
-              <!-- Modal content-->
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  <h4 class="modal-title">Update Collectible</h4>
+        <div class="modal fade" id="myModal" role="dialog">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Update Collectible</h4>
+              </div>
+              <div id = "update_add">
+                <div class = "col-md-6" id= "check">
+                  <div id = "update_top">
+                  Name:<input class = "form-control" type="update_name" name ="update_name" id="update_name">
+                  </div>
+                  <div id = "update_middle_top" class="container-fluid nopadding">
+                    <div class = "row nopadding">
+                      <div class = "col-sm-4 nopadding">
+                        <label for="update_type">Type:</label>
+                    		<select id="update_type" class = "form-control">
+                    			<option value="Rocks">Rocks</option>
+                    			<option value="Arrowheads">Arrowheads</option>
+                          <option value="Coins">Coins</option>
+                    			<option value="Cards">Cards</option>
+                          <option value="Stamps">Stamps</option>
+                    			<option value="Ornaments">Ornaments</option>
+                          <option value="Books">Books</option>
+                    			<option value="Pez Dispenser">Pez Dispenser</option>
+                    		</select>
+                      </div>
+                      <div class = "col-sm-4">
+                        <label for="update_condition">Condition:</label>
+                        <select id="update_condition" class = "form-control">
+                    			<option value="New">New</option>
+                    			<option value="Like New">Like New</option>
+                          <option value="Good">Good</option>
+                    			<option value="Fair">Fair</option>
+                          <option value="Poor">Poor</option>
+                    		</select>
+                      </div>
+                      <div class = "col-sm-4 nopadding">
+                        <label for="update_color">Color:</label>
+                        <select id="update_color_modal" class = "form-control background-color">
+                          <option id = "color-option1" value="Black">Black</option>
+                          <option id = "color-option2" value="Blue">Blue</option>
+                          <option id = "color-option3" value="Green">Green</option>
+                          <option id = "color-option4" value="Orange">Orange</option>
+                          <option id = "color-option5" value="Red">Red</option>
+                          <option id = "color-option6" value="Violet">Violet</option>
+                          <option id = "color-option7" value="Yellow">Yellow</option>
+                          <option id = "color-option8" value="White">White</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class = "row nopadding">
+                    <div id="div_age" class = "col-xs-4 somepadding">
+                      Age:<input type="update_age" class = "form-control" name ="update_age">
+                    </div>
+                    <div id="div_catalogId" class = "col-xs-7 somepadding pull-right">
+                      Catalog Number:<input type="catalogId" class = "form-control" name ="update_catalogId">
+                    </div>
+                  </div>
+                  Keywords:
+                  <input type="keyword1" class = "form-control keyword-control" name ="update_keyword1" id="update_keyword1">
+                  <input type="keyword2" class = "form-control keyword-control" name ="update_keyword2" id="update_keyword2">
+                  <input type="keyword3" class = "form-control keyword-control" name ="update_keyword3" id="update_keyword3">
                 </div>
-                <div id = "update_add">
-                  <div id= "update_check">
-                    <div id = "update_top">
-                    Name: &nbsp;<input type="name" name ="name" id="update_name">
-                    </div>
-                    <div id = "update_middle_top">
-                      <label for="type">Type:&nbsp;</label>
-                  		<select id="update_type">
-                  			<option value="Rocks">Rocks</option>
-                  			<option value="Arrowheads">Arrowheads</option>
-                        <option value="Coins">Coins</option>
-                  			<option value="Cards">Cards</option>
-                        <option value="Stamps">Stamps</option>
-                  			<option value="Ornaments">Ornaments</option>
-                        <option value="Books">Books</option>
-                  			<option value="Pez Dispenser">Pez Dispenser</option>
-                  		</select>
-                      <label for="condition">Condition:</label>
-                      <select id="update_condition">
-                  			<option value="New">New</option>
-                  			<option value="Like New">Like New</option>
-                        <option value="Good">Good</option>
-                  			<option value="Fair">Fair</option>
-                        <option value="Poor">Poor</option>
-                  		</select>
-                      <label for="color">Color:</label>
-                      <select id="update_color">
-                        <option value="Black">Black</option>
-                        <option value="Blue">Blue</option>
-                        <option value="Green">Green</option>
-                        <option value="Orange">Orange</option>
-                        <option value="Red">Red</option>
-                        <option value="Yellow">Yellow</option>
-                        <option value="Violet">Violet</option>
-                        <option value="White">White</option>
-                      </select>
-                    </div>
-                    <br>
-                    <div id = "update_middle">
-                      <span id = "update_agespan">Age:&nbsp; &nbsp;<input type="age" name ="age" id="update_age"></span>
-                      Catalog Number: &nbsp;<input type="catalogId" name ="catalogId" id="update_catalogId">
-                    </div>
-                    <br>
-                    Keywords:<br>
-                    <input type="keyword1" name ="keyword1" id="update_keyword1">
-                    <input type="keyword2" name ="keyword2" id="update_keyword2">
-                    <input type="keyword3" name ="keyword3" id="update_keyword3">
-                  </div>
-                	<div>
-                    <label for="description">Description:</label>
-                    <textarea class="form-control" rows="5" id="update_description"></textarea>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-info btn-lg" id="updateSubmit">Update Your Collectible</button>
-                  </div>
+              	<div class = "col-md-6">
+                  <label for="update_description">Description:</label>
+                  <textarea class="form-control" rows="13" id="update_description"></textarea>
+                  <br>
                 </div>
-
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-info btn-block" id="modalButton">Update Your Collectible</button>
                 </div>
               </div>
-
             </div>
           </div>
-
         </div>
-
+      </div>
   </body>
 </html>
